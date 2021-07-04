@@ -6,7 +6,7 @@
     height: 70px;
     position: fixed;
     top: 0;
-    z-index: 2; //bigger than other pages.Its always on other
+    z-index: 3; //bigger than other pages.Its always on other
     transition: all 2s ease;//navBar  color change smooth (white to black)
 
         .wrapper{
@@ -68,7 +68,7 @@
 
 
         &.active{
-            background-color: black;
+            background-color: $mainColor;
             color: white;
 
                 .menu{

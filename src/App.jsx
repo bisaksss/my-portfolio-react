@@ -6,6 +6,7 @@ import Testimonials from "./component/testimonials/Testimonials";
 import Contact from "./component/contact/Contact";
 import "./app.scss";
 import { useState } from "react";
+import MenuOpen from "./component/onMenu/MenuOpen";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="app">
       <TopBar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <MenuOpen menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
 
           <div className="sections">
             
