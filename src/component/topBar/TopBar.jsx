@@ -3,7 +3,7 @@ import { Person,Mail } from "@material-ui/icons";
 
 export default function TopBar() {
     return (
-        <div className="topbar">
+        <div className="topbar active">
             <div className="wrapper">
                 <div className="left">
                     <a href="#intro" className="logo">codeX_Pro</a>

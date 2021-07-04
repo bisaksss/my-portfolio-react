@@ -57,9 +57,35 @@
                             width: 100%;
                             height: 3px;
                             background-color: $mainColor;
+                            transform-origin: left; //change rotate position
+                            transition: all 2s ease; //give time to  rotation
                         }
                     }
                 }
     
+        }
+
+
+        &.active{
+            background-color: black;
+            color: white;
+
+                .menu{
+
+                        Span{
+                            &:first-child{
+                                background-color: white; //first elements
+                                transform: rotate(45deg);
+                            }
+                            &:nth-child(2){             //middle one
+                                opacity: 0;
+                            }
+                            &:last-child{
+                                background-color: white; //last one
+                                transform: rotate(-45deg);
+                            }
+                        }
+
+                }
         }
 }
