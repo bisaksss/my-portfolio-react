@@ -1,6 +1,18 @@
 import "./intro.scss";
 import {PlayForWork} from "@material-ui/icons";
+import { useEffect,useRef } from "react";
+import { init } from 'ityped';
+
+
 export default function Intro() {
+    
+   const textref = useRef();
+    
+    useEffect(() => {
+        init(textref.current, { showCursor: true,backDelay:  1500, strings: ['Web Developer', 'Video Editor' ] })
+    }, [])
+
+
     return (
         <div className="intro" id="intro">
             <div className="left">
@@ -13,7 +25,7 @@ export default function Intro() {
                 <div className="rightWrapper">
                     <h2>Hi There I'm</h2>
                     <h1>Bisak Sampath</h1>
-                    <h3>Freelance <span></span></h3>
+                    <h3>Freelance <span ref={textref}></span></h3>
                 </div>
                 <a href="#portfolio">
                 <PlayForWork className="downArrow"/>
