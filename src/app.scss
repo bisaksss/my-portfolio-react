@@ -7,10 +7,20 @@
         background-color: rgb(175, 135, 135);
         position: relative;
         top: 70px;
-        
+
+        scroll-behavior: smooth; //smoothly scroll
+
+
+
+        scroll-snap-type:y mandatory;
+        scrollbar-width:none;
+       &::-webkit-scrollbar{
+           display: none; //hide scroll bar but scroll working
+       }
         > *{
             width: 100vw;
             height: calc(100vh - 70px);
+            scroll-snap-align: start; 
         }
         
     }
