@@ -7,6 +7,7 @@
     position: fixed;
     top: 0;
     z-index: 2; //bigger than other pages.Its always on other
+    transition: all 2s ease;//navBar  color change smooth (white to black)
 
         .wrapper{
             padding: 10px 30px;
