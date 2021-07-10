@@ -9,12 +9,21 @@
 
     h1{
         font-size: 50px;
+        @include mobile{
+            font-size: 20px;
+         }
     }
     ul{
         margin: 10px;
         padding: 0;
         list-style: none;
         display: flex;
+
+        @include mobile{
+           flex-wrap: wrap;
+           justify-content: center;
+           margin: 0;
+         }
    
     }
     .conatiner{
@@ -23,6 +32,10 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;// not in same line
+
+        @include mobile{
+            width: 100%;
+         }
     
 
         .items{
@@ -38,7 +51,11 @@
             position: relative;
             transition: all 1s ease;
             cursor: pointer;
-           
+            @include mobile{
+                width: 150px;
+                height:120px;
+
+             }
 
             h3{
                 position: absolute;
