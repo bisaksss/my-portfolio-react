@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 70px;
+    
 
     h1{
         font-size: 50px;
@@ -22,6 +23,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;// not in same line
+    
 
         .items{
             width: 220px;
@@ -36,6 +38,7 @@
             position: relative;
             transition: all 1s ease;
             cursor: pointer;
+           
 
             h3{
                 position: absolute;
