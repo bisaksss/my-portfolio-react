@@ -1,8 +1,10 @@
 import "./works.scss";
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import { useState } from "react";
 
 export default function Works() {
+    const[currentSlid,setCurrentSlide]= useState(0);
 
     const data=[
         {
@@ -27,9 +29,14 @@ export default function Works() {
             image:"assets/download.jpg"
         },
     ];
+
+    const handleClick=(way)=>{
+        way==="left" ? setCurrentSlide(currentSlid > 0 ? currentSlid - 1 : 2) :
+         setCurrentSlide(currentSlid < data.length-1 ? currentSlid + 1 : 0)
+    };
     return (
         <div className="works" id="works">
-            <div className="slider">
+            <div className="slider" style={{transform:`translateX(-${currentSlid * 100}vw)`}}>
                 
                 {data.map((d)=>(
                         <div className="container">
@@ -60,8 +67,8 @@ export default function Works() {
                
             </div>
 
-            <ArrowForwardIosIcon className="arrow right"/>
-            <ArrowBackIosIcon className="arrow left"/>
+            <ArrowForwardIosIcon className="arrow right" onClick={()=>handleClick()}/>
+            <ArrowBackIosIcon className="arrow left" onClick={()=>handleClick("left")}/>
             
         </div>
     )
